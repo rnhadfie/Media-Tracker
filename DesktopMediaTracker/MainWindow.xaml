@@ -1,0 +1,39 @@
+﻿<Window x:Class="DesktopMediaTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopMediaTracker"
+        mc:Ignorable="d"
+        Title="Main Window" Height="383.654" Width="525">
+
+    <Grid Margin="0,10,0,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="47*"/>
+        </Grid.RowDefinitions>
+
+
+        <StatusBar Margin="0,309,0,-2" Grid.Row="1"/>
+
+        <Menu x:Name="uxMenu" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="517" Margin="0,-6,0,0">
+            <MenuItem x:Name="uxFileMenuItem" Header="File"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="50">
+                <MenuItem x:Name="uxFileMenuItemClose" Header="Close"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="130" Click="uxFileMenuItemClose_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="uxMediaMenuItem" Header="Media"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="50">
+                <MenuItem x:Name="uxMediaMenuItemMovie" Header="Movies"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="130"/>
+                <MenuItem x:Name="uxMediaMenuItemTvShow" Header="Tv Shows"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="130"/>
+                <MenuItem x:Name="uxMediaMenuItemMusic" Header="Albums"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="130"/>
+                <MenuItem x:Name="uxMediaMenuItemNovel" Header="Novels"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="130"/>
+                <MenuItem x:Name="uxMediaMenuItemGraphicNovel" Header="Comics, Manga,and Graphic Novels"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="130"/>
+            </MenuItem>
+        </Menu>
+        <DockPanel HorizontalAlignment="Left" Height="304" LastChildFill="False" Grid.Row="1" VerticalAlignment="Top" Width="517">
+            <Frame x:Name="_MainFrame" Content="" Height="304" VerticalAlignment="Top" Width="520"/>
+        </DockPanel>
+
+
+
+    </Grid>
+</Window>
