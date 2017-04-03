@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using OmdbRest;
 
 namespace DesktopMediaTracker.Pages
 {
@@ -23,6 +24,13 @@ namespace DesktopMediaTracker.Pages
         public MultiMediaSearchPage()
         {
             InitializeComponent();
+        }
+
+        private void uxSearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            string itemTitle = uxSearchText.Text;
+            var x = Client.GetByTitle(itemTitle);
+            
         }
     }
 }

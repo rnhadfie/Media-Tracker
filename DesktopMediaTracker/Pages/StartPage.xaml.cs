@@ -32,8 +32,8 @@ namespace DesktopMediaTracker.Pages
         }
         private void uxViewYourMedia_Click(object sender, RoutedEventArgs e)
         {
-            var x =Client.GetByTitle("Arrow");
-            Console.WriteLine(x.Plot);
+           
+            
 
 
         }

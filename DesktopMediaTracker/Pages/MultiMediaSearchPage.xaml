@@ -6,11 +6,11 @@
       xmlns:local="clr-namespace:DesktopMediaTracker.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="304" d:DesignWidth="520"
-      Title="MultiMediaSearchPage">
+      Title="MultiMediaSearchPage" >
 
     <Grid>
         <Rectangle Fill="Azure"  HorizontalAlignment="Left" Height="80" Stroke="Black" VerticalAlignment="Top" Width="520"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="500"/>
+        <TextBox x:Name="uxSearchText" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="500"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="403,49,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="97">
                 <Hyperlink NavigateUri="AdvancedSearchPage.xaml?Message=Hello">Advanced Search</Hyperlink>
         </TextBlock>
@@ -30,6 +30,9 @@
             <ComboBoxItem Content="Comic/Manga/Graphic Novel" HorizontalAlignment="Left" Width="178"/>
             <ComboBoxItem Content="Album" HorizontalAlignment="Left" Width="193"/>
         </ComboBox>
+        <Button x:Name="uxSearchButton" Content="Search" HorizontalAlignment="Left" Margin="255,45,0,0" 
+                VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.84,0.3" Click="uxSearchButton_Click"
+                />
 
 
     </Grid>

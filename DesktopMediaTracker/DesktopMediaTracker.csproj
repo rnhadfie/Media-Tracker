@@ -167,12 +167,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Interface\InterfaceAndEnumLibrary.csproj">
-      <Project>{BDE84D7B-BF34-4AB0-9D87-DB67D6CD2E35}</Project>
-      <Name>InterfaceAndEnumLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
