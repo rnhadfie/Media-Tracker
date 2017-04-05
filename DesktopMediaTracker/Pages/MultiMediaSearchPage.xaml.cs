@@ -12,7 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using OmdbRest;
+using Omdb.Net.RequestBuilder;
+using System.Net;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace DesktopMediaTracker.Pages
 {
@@ -29,8 +32,24 @@ namespace DesktopMediaTracker.Pages
         private void uxSearchButton_Click(object sender, RoutedEventArgs e)
         {
             string itemTitle = uxSearchText.Text;
-            var x = Client.GetByTitle(itemTitle);
             
+
+            string url = "http://www.omdbapi.com/?s=" + itemTitle.Trim();
+            using (WebClient wc = new WebClient())
+            {
+                var json = wc.DownloadString(url);
+                var jsonist = json.Split('[')[1];
+                jsonist = "["+json.Split(']')[0]+"]";
+   
+                var result = JsonConvert.DeserializeObject<List<ImdbObj>>(jsonist);
+
+               
+               
+
+
+            }
         }
+
     }
+    
 }
