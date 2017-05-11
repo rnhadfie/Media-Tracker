@@ -1,0 +1,27 @@
+﻿<Window x:Class="DesktopMediaTracker.MovieWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopMediaTracker"
+        mc:Ignorable="d"
+        Title="MovieWindow" Height="472" Width="299">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="292">
+            <Label x:Name="uxTitle" Content="" Margin="-1,9,220,10"/>
+        </Border>
+        <ComboBox x:Name="uxWatchingStatus" HorizontalAlignment="Left" Margin="375,50,0,0" VerticalAlignment="Top" Width="120">
+
+        </ComboBox>
+        <Label x:Name="uxPlotLabel" Content="Plot" HorizontalAlignment="Left" Margin="0,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0"/>
+        <TextBox x:Name="uxPlotBlock" HorizontalAlignment="Left" Margin="36,54,0,0" 
+                   TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="246"
+                   IsReadOnly="True" />
+        <Label x:Name="uxActorsLabel" Content="Actors:" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="uxActors" HorizontalAlignment="Left" Height="23" Margin="10,180,0,0" 
+                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272"
+                 IsReadOnly="True"/>
+        <Label x:Name="uxYear" Content="Year: " HorizontalAlignment="Left" Margin="18,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="uxRating" Content="Rating: " HorizontalAlignment="Left" Margin="190,118,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -22,5 +22,16 @@ namespace DesktopMediaTracker.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=RHIANNEPC\\MSSQLSERVER01;Initial Catalog=UserDataTable;Integrated Secu" +
+            "rity=True")]
+        public string UserDataConnectionString {
+            get {
+                return ((string)(this["UserDataConnectionString"]));
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace MediaObjectsInterface
        string Rating { get; set; }
        string Runtime { get; set; }
        string[] Genre { get; set; }
-        string[] Director { get; set; }
+        string Director { get; set; }
         string[] Writers { get; set; }
         string[] Actors { get; set; }
         string Plot { get; set; }

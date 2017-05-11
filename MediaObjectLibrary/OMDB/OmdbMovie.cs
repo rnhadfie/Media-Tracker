@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesktopMediaTracker
+namespace MediaObjectLibrary.OMDB
 {
-    class SearchList
-    {
-        public List<ImdbObj> Data { get; set; }
-    }
-    public class ImdbObj
+   public class OmdbMovie
     {
         public string Title { get; set; }
         public string Year { get; set; }

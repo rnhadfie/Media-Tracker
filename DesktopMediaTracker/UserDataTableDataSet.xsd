@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UserDataTableDataSet" targetNamespace="http://tempuri.org/UserDataTableDataSet.xsd" xmlns:mstns="http://tempuri.org/UserDataTableDataSet.xsd" xmlns="http://tempuri.org/UserDataTableDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="UserDataConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="UserDataConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DesktopMediaTracker.Properties.Settings.GlobalReference.Default.UserDataConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UserDataTableDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="UserDataTableDataSet" msprop:Generator_UserDSName="UserDataTableDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ShowInfomation" msprop:Generator_TableClassName="ShowInfomationDataTable" msprop:Generator_TableVarName="tableShowInfomation" msprop:Generator_TablePropName="ShowInfomation" msprop:Generator_RowDeletingName="ShowInfomationRowDeleting" msprop:Generator_RowChangingName="ShowInfomationRowChanging" msprop:Generator_RowEvHandlerName="ShowInfomationRowChangeEventHandler" msprop:Generator_RowDeletedName="ShowInfomationRowDeleted" msprop:Generator_UserTableName="ShowInfomation" msprop:Generator_RowChangedName="ShowInfomationRowChanged" msprop:Generator_RowEvArgName="ShowInfomationRowChangeEvent" msprop:Generator_RowClassName="ShowInfomationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShowId" msprop:Generator_ColumnVarNameInTable="columnShowId" msprop:Generator_ColumnPropNameInRow="ShowId" msprop:Generator_ColumnPropNameInTable="ShowIdColumn" msprop:Generator_UserColumnName="ShowId" type="xs:string" />
+              <xs:element name="ShowStatus" msprop:Generator_ColumnVarNameInTable="columnShowStatus" msprop:Generator_ColumnPropNameInRow="ShowStatus" msprop:Generator_ColumnPropNameInTable="ShowStatusColumn" msprop:Generator_UserColumnName="ShowStatus" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Status" msprop:Generator_TableClassName="StatusDataTable" msprop:Generator_TableVarName="tableStatus" msprop:Generator_TablePropName="Status" msprop:Generator_RowDeletingName="StatusRowDeleting" msprop:Generator_RowChangingName="StatusRowChanging" msprop:Generator_RowEvHandlerName="StatusRowChangeEventHandler" msprop:Generator_RowDeletedName="StatusRowDeleted" msprop:Generator_UserTableName="Status" msprop:Generator_RowChangedName="StatusRowChanged" msprop:Generator_RowEvArgName="StatusRowChangeEvent" msprop:Generator_RowClassName="StatusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StatusCode" msprop:Generator_ColumnVarNameInTable="columnStatusCode" msprop:Generator_ColumnPropNameInRow="StatusCode" msprop:Generator_ColumnPropNameInTable="StatusCodeColumn" msprop:Generator_UserColumnName="StatusCode" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="PK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ShowInfomation" />
+      <xs:field xpath="mstns:ShowId" />
+    </xs:unique>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:ShowInfomation" />
+      <xs:field xpath="mstns:ShowStatus" />
+    </xs:unique>
+    <xs:unique name="Status_PK" msdata:ConstraintName="PK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Status" />
+      <xs:field xpath="mstns:StatusCode" />
+    </xs:unique>
+    <xs:keyref name="ShowStatusRelation" refer="Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:Status" />
+      <xs:field xpath="mstns:StatusCode" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

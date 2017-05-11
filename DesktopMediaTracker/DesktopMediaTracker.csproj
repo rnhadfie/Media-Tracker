@@ -52,9 +52,6 @@
       <HintPath>..\packages\imdbapi.1.0.2\lib\imdbAPI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MediaObjects">
-      <HintPath>..\MediaObjects\bin\Release\MediaObjects.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -114,6 +111,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserDataTableDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataTableDataSet.xsd</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -122,12 +124,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ImdbObj.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MovieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdvancedSearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MovieDetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,10 +152,20 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Panel\MoviePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MovieWindow.xaml.cs">
+      <DependentUpon>MovieWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdvancedSearchPage.xaml.cs">
       <DependentUpon>AdvancedSearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MovieDetailsPage.xaml.cs">
+      <DependentUpon>MovieDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MultiMediaSearchPage.xaml.cs">
       <DependentUpon>MultiMediaSearchPage.xaml</DependentUpon>
@@ -156,6 +175,9 @@
     </Compile>
     <Compile Include="Pages\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\MoviePanel.xaml.cs">
+      <DependentUpon>MoviePanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -181,12 +203,36 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="UserDataTableDataSet.xsc">
+      <DependentUpon>UserDataTableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataTableDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataTableDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataTableDataSet.xss">
+      <DependentUpon>UserDataTableDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MediaObjectLibrary\MediaObjectLibrary.csproj">
+      <Project>{8a63fb53-9343-4adc-bc2d-094e27c47d8d}</Project>
+      <Name>MediaObjectLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MediaObjectsInterface\MediaObjectsInterface.csproj">
+      <Project>{7E0FFC9E-1120-4499-BC37-03EF3E74CB60}</Project>
+      <Name>MediaObjectsInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

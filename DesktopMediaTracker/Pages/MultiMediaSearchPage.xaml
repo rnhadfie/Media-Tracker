@@ -5,24 +5,38 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DesktopMediaTracker.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="304" d:DesignWidth="520"
-      Title="MultiMediaSearchPage" >
+      d:DesignHeight="304"
+      Title="MultiMediaSearchPage" Width="515" >
 
-    <Grid>
+    <Canvas>
         <Rectangle Fill="Azure"  HorizontalAlignment="Left" Height="80" Stroke="Black" VerticalAlignment="Top" Width="520"/>
         <TextBox x:Name="uxSearchText" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="500"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="403,49,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="97">
                 <Hyperlink NavigateUri="AdvancedSearchPage.xaml?Message=Hello">Advanced Search</Hyperlink>
         </TextBlock>
-        <ScrollViewer HorizontalAlignment="Left" Height="195" Margin="0,85,0,0" VerticalAlignment="Top" Width="520">
-            <StackPanel Height="180" Width="507"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="510" Canvas.Top="85">
+            <Grid Name="uxDisplayGrid" Height="320" Width="504" ShowGridLines="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75
+                                   *"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="252"/>
+                    <ColumnDefinition Width="252"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
         </ScrollViewer>
         <Label x:Name="uxFirst" Content="1, " HorizontalAlignment="Left" Margin="196,280,0,-29" VerticalAlignment="Top" Height="29" Width="24" TextBlock.Foreground="Blue" TextBlock.TextAlignment="Right" RenderTransformOrigin="0.417,-2.241"/>
         <Label x:Name="uxNext" Content="2,  " HorizontalAlignment="Left" Margin="220,280,0,-29" VerticalAlignment="Top" Height="29" Width="22" TextBlock.Foreground="Blue"/>
         <Label x:Name="uxNextTwo" Content="3,  " HorizontalAlignment="Left" Margin="242,280,0,-29" VerticalAlignment="Top" Height="29" Width="22" TextBlock.Foreground="Blue"/>
         <Label x:Name="uxLast" Content="Last" HorizontalAlignment="Left" Margin="269,280,0,-29" VerticalAlignment="Top" Height="29" Width="37" TextBlock.Foreground="Blue" RenderTransformOrigin="0.73,0.345"/>
 
-        <ComboBox x:Name="uxItemTypeComboBox" Canvas.Left="10" Canvas.Top="39" Width="195" Margin="10,49,315,239" >
+        <ComboBox x:Name="uxItemTypeComboBox" Canvas.Left="10" Canvas.Top="45" Width="195" >
             <ComboBoxItem Content="All Media" HorizontalAlignment="Left" Width="178"/>
             <ComboBoxItem Content="Tv Show" HorizontalAlignment="Left" Width="178"/>
             <ComboBoxItem Content="Movie" HorizontalAlignment="Left" Width="178"/>
@@ -35,5 +49,5 @@
                 />
 
 
-    </Grid>
+    </Canvas>
 </Page>

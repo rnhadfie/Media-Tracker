@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaObjectLibrary
 {
-    enum MediaStatus
+    public enum MediaStatus
     {
        NA, PlaningToWatch,Watching, Completed, Dropped
     }

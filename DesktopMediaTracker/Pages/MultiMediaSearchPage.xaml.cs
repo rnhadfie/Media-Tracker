@@ -16,6 +16,8 @@ using Omdb.Net.RequestBuilder;
 using System.Net;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
+using MediaObjectLibrary.OMDB;
+using MediaObjectLibrary.Managers;
 
 namespace DesktopMediaTracker.Pages
 {
@@ -32,24 +34,24 @@ namespace DesktopMediaTracker.Pages
         private void uxSearchButton_Click(object sender, RoutedEventArgs e)
         {
             string itemTitle = uxSearchText.Text;
-            
-
-            string url = "http://www.omdbapi.com/?s=" + itemTitle.Trim();
-            using (WebClient wc = new WebClient())
+            List<OmdbSearch> list= MediaObjectFactory.Search(itemTitle);
+            int n = 0;
+            uxDisplayGrid.Children.Clear();
+            for (int i = 0; i < 5 && n<list.Count; i++)
             {
-                var json = wc.DownloadString(url);
-                var jsonist = json.Split('[')[1];
-                jsonist = "["+json.Split(']')[0]+"]";
-   
-                var result = JsonConvert.DeserializeObject<List<ImdbObj>>(jsonist);
-
-               
-               
-
-
+               for (int j = 0; j < 2 && n < list.Count; j++)
+                {
+                    Panel.MoviePanel temp= new Panel.MoviePanel();
+                    temp.uxTitle.Content = list[n].Title;
+                    temp.uxYear.Content= list[n].Year;
+                    temp.uxSeries.Content= list[n].Type;
+                    temp.ItemId = list[n].imdbID;
+                    Grid.SetRow(temp, i);
+                    Grid.SetColumn(temp, j);
+                    uxDisplayGrid.Children.Add(temp);
+                    n++;
+                }
             }
         }
-
-    }
-    
+  } 
 }

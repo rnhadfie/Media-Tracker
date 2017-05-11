@@ -1,4 +1,4 @@
-﻿using MediaObjects;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,27 +40,27 @@ namespace DesktopMediaTracker.Pages
 
         private void uxMediaMovies_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new SingleMediaSearchPage("Movie"));
+           // this.NavigationService.Navigate(new SingleMediaSearchPage("Movie"));
         }
 
         private void uxMediaGraphicNovel_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new SingleMediaSearchPage("Graphic Novel"));
+            //this.NavigationService.Navigate(new SingleMediaSearchPage("Graphic Novel"));
         }
 
         private void uxMediaNovels_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new SingleMediaSearchPage("Novel"));
+            //this.NavigationService.Navigate(new SingleMediaSearchPage("Novel"));
         }
 
         private void uxMediaTvShows_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new SingleMediaSearchPage("Tv Show"));
+//this.NavigationService.Navigate(new SingleMediaSearchPage("Tv Show"));
         }
 
         private void uxMediaMusic_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new SingleMediaSearchPage("Music"));
+            //this.NavigationService.Navigate(new SingleMediaSearchPage("Music"));
         }
 
         private void uxSearchButton_Click(object sender, RoutedEventArgs e)
