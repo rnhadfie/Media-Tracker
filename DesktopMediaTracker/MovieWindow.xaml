@@ -5,23 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopMediaTracker"
         mc:Ignorable="d"
-        Title="MovieWindow" Height="472" Width="299">
-    <Grid>
+        Title="MovieWindow" Height="502" Width="299">
+    <Grid Margin="0,0,0,-1">
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="292">
-            <Label x:Name="uxTitle" Content="" Margin="-1,9,220,10"/>
+            <Label x:Name="uxTitle" Content="" Margin="9,10,9,9"/>
         </Border>
         <ComboBox x:Name="uxWatchingStatus" HorizontalAlignment="Left" Margin="375,50,0,0" VerticalAlignment="Top" Width="120">
 
         </ComboBox>
         <Label x:Name="uxPlotLabel" Content="Plot" HorizontalAlignment="Left" Margin="0,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,0"/>
         <TextBox x:Name="uxPlotBlock" HorizontalAlignment="Left" Margin="36,54,0,0" 
-                   TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="246"
+                   TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="79" Width="246"
                    IsReadOnly="True" />
-        <Label x:Name="uxActorsLabel" Content="Actors:" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="uxActors" HorizontalAlignment="Left" Height="23" Margin="10,180,0,0" 
-                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272"
-                 IsReadOnly="True"/>
-        <Label x:Name="uxYear" Content="Year: " HorizontalAlignment="Left" Margin="18,118,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="uxRating" Content="Rating: " HorizontalAlignment="Left" Margin="190,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="uxActorsLabel" Content="Actors:" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="uxYear" Content="Year: " HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="uxRating" Content="Rating: " HorizontalAlignment="Left" Margin="190,138,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="uxActorListBox" HorizontalAlignment="Left" Height="100" Margin="10,211,0,0" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="uxDirectorLabel" Content="Director: " HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Width="271"/>
+        <ListBox x:Name="uxGenreListBox" HorizontalAlignment="Left" Height="100" Margin="170,211,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="uxGenreLabel" Content="Genre" HorizontalAlignment="Left" Margin="170,185,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="uxLangaugeLabel" Content="Language: " HorizontalAlignment="Left" Margin="18,316,0,0" VerticalAlignment="Top" Width="252"/>
+        <Label x:Name="uxRuntimeLabel" Content="Runtime: " HorizontalAlignment="Left" Margin="18,347,0,0" Width="252" Height="26" VerticalAlignment="Top"/>
+        <ComboBox x:Name="uxStatusComboBox" HorizontalAlignment="Left" Margin="10,400,0,0" VerticalAlignment="Top" Width="271"/>
     </Grid>
 </Window>

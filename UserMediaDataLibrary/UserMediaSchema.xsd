@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UserMedia" targetNamespace="http://tempuri.org/UserMedia.xsd" xmlns:mstns="http://tempuri.org/UserMedia.xsd" xmlns="http://tempuri.org/UserMedia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UserMedia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="UserMedia" msprop:Generator_UserDSName="UserMedia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserMedia" msprop:Generator_TableClassName="UserMediaDataTable" msprop:Generator_TableVarName="tableUserMedia" msprop:Generator_TablePropName="_UserMedia" msprop:Generator_RowDeletingName="UserMediaRowDeleting" msprop:Generator_RowChangingName="UserMediaRowChanging" msprop:Generator_RowEvHandlerName="UserMediaRowChangeEventHandler" msprop:Generator_RowDeletedName="UserMediaRowDeleted" msprop:Generator_UserTableName="UserMedia" msprop:Generator_RowChangedName="UserMediaRowChanged" msprop:Generator_RowEvArgName="UserMediaRowChangeEvent" msprop:Generator_RowClassName="UserMediaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:string" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:int" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:int" minOccurs="0" />
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Status" msprop:Generator_TableClassName="StatusDataTable" msprop:Generator_TableVarName="tableStatus" msprop:Generator_TablePropName="Status" msprop:Generator_RowDeletingName="StatusRowDeleting" msprop:Generator_RowChangingName="StatusRowChanging" msprop:Generator_RowEvHandlerName="StatusRowChangeEventHandler" msprop:Generator_RowDeletedName="StatusRowDeleted" msprop:Generator_UserTableName="Status" msprop:Generator_RowChangedName="StatusRowChanged" msprop:Generator_RowEvArgName="StatusRowChangeEvent" msprop:Generator_RowClassName="StatusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Type" msprop:Generator_TableClassName="TypeDataTable" msprop:Generator_TableVarName="tableType" msprop:Generator_TablePropName="Type" msprop:Generator_RowDeletingName="TypeRowDeleting" msprop:Generator_RowChangingName="TypeRowChanging" msprop:Generator_RowEvHandlerName="TypeRowChangeEventHandler" msprop:Generator_RowDeletedName="TypeRowDeleted" msprop:Generator_UserTableName="Type" msprop:Generator_RowChangedName="TypeRowChanged" msprop:Generator_RowEvArgName="TypeRowChangeEvent" msprop:Generator_RowClassName="TypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemGenres" msprop:Generator_TableClassName="ItemGenresDataTable" msprop:Generator_TableVarName="tableItemGenres" msprop:Generator_TablePropName="ItemGenres" msprop:Generator_RowDeletingName="ItemGenresRowDeleting" msprop:Generator_RowChangingName="ItemGenresRowChanging" msprop:Generator_RowEvHandlerName="ItemGenresRowChangeEventHandler" msprop:Generator_RowDeletedName="ItemGenresRowDeleted" msprop:Generator_UserTableName="ItemGenres" msprop:Generator_RowChangedName="ItemGenresRowChanged" msprop:Generator_RowEvArgName="ItemGenresRowChangeEvent" msprop:Generator_RowClassName="ItemGenresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:string" />
+              <xs:element name="GenreCode" msprop:Generator_ColumnVarNameInTable="columnGenreCode" msprop:Generator_ColumnPropNameInRow="GenreCode" msprop:Generator_ColumnPropNameInTable="GenreCodeColumn" msprop:Generator_UserColumnName="GenreCode" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Genre" msprop:Generator_TableClassName="GenreDataTable" msprop:Generator_TableVarName="tableGenre" msprop:Generator_TablePropName="Genre" msprop:Generator_RowDeletingName="GenreRowDeleting" msprop:Generator_RowChangingName="GenreRowChanging" msprop:Generator_RowEvHandlerName="GenreRowChangeEventHandler" msprop:Generator_RowDeletedName="GenreRowDeleted" msprop:Generator_UserTableName="Genre" msprop:Generator_RowChangedName="GenreRowChanged" msprop:Generator_RowEvArgName="GenreRowChangeEvent" msprop:Generator_RowClassName="GenreRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GenreCode" msprop:Generator_ColumnVarNameInTable="columnGenreCode" msprop:Generator_ColumnPropNameInRow="GenreCode" msprop:Generator_ColumnPropNameInTable="GenreCodeColumn" msprop:Generator_UserColumnName="GenreCode" type="xs:int" minOccurs="0" />
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="UserMediaKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UserMedia" />
+      <xs:field xpath="mstns:ItemId" />
+    </xs:unique>
+    <xs:unique name="StatusKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Status" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="TypeKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Type" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="ItemGenresKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ItemGenres" />
+      <xs:field xpath="mstns:ItemId" />
+      <xs:field xpath="mstns:GenreCode" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Status_UserMedia" msdata:parent="Status" msdata:child="UserMedia" msdata:parentkey="Id" msdata:childkey="Status" msprop:Generator_UserChildTable="UserMedia" msprop:Generator_ChildPropName="GetUserMediaRows" msprop:Generator_UserRelationName="Status_UserMedia" msprop:Generator_RelationVarName="relationStatus_UserMedia" msprop:Generator_UserParentTable="Status" msprop:Generator_ParentPropName="StatusRow" />
+      <msdata:Relationship name="UserMedia_Type" msdata:parent="UserMedia" msdata:child="Type" msdata:parentkey="Type" msdata:childkey="Id" msprop:Generator_UserChildTable="Type" msprop:Generator_ChildPropName="GetTypeRows" msprop:Generator_UserRelationName="UserMedia_Type" msprop:Generator_ParentPropName="UserMediaRow" msprop:Generator_RelationVarName="relationUserMedia_Type" msprop:Generator_UserParentTable="UserMedia" />
+      <msdata:Relationship name="ItemGenres_Genre" msdata:parent="ItemGenres" msdata:child="Genre" msdata:parentkey="GenreCode" msdata:childkey="GenreCode" msprop:Generator_UserChildTable="Genre" msprop:Generator_ChildPropName="GetGenreRows" msprop:Generator_UserRelationName="ItemGenres_Genre" msprop:Generator_ParentPropName="ItemGenresRow" msprop:Generator_RelationVarName="relationItemGenres_Genre" msprop:Generator_UserParentTable="ItemGenres" />
+      <msdata:Relationship name="UserMedia_ItemGenres" msdata:parent="UserMedia" msdata:child="ItemGenres" msdata:parentkey="ItemId" msdata:childkey="ItemId" msprop:Generator_UserChildTable="ItemGenres" msprop:Generator_ChildPropName="GetItemGenresRows" msprop:Generator_UserRelationName="UserMedia_ItemGenres" msprop:Generator_ParentPropName="UserMediaRow" msprop:Generator_RelationVarName="relationUserMedia_ItemGenres" msprop:Generator_UserParentTable="UserMedia" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

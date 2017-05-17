@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<UserMedia>
+  <Status>
+    <Id>0</Id>
+    <Status>Not Watching</Status>
+  </Status>
+  
+  <Status>
+    <Id>1</Id>
+    <Status>Planning To Watch</Status>
+  </Status>
+
+  <Status>
+    <Id>2</Id>
+    <Status>Watching</Status>
+  </Status>
+
+  <Status>
+    <Id>3</Id>
+    <Status>Watched</Status>
+  </Status>
+
+  <Status>
+    <Id>4</Id>
+    <Status>Dropped</Status>
+  </Status>
+</UserMedia>

@@ -42,7 +42,7 @@ namespace MediaObjectLibrary.Managers
             }
         }
 
-        public int PageTotal { get { return _PageTotal; } }
+        public static int PageTotal { get { return _PageTotal; } }
         public List<OmdbTvShow> ListOfSeries { get { return _ListOfSeries; } }
         public List<OmdbMovie> ListOfMovies { get { return _ListOfMovies; } }
 
@@ -55,47 +55,43 @@ namespace MediaObjectLibrary.Managers
                 //string url = "http://www.omdbapi.com/?s=" + itemTitle.Trim();
                 var json = wc.DownloadString((searchURL + title + "&Page=1").Trim());
                 var jsonist = json.Split('[')[1];
-
-                //_PageTotal = Convert.ToInt32(jsonist.Split(']')[1].Split(':')[1]);
+                int index = json.IndexOf("totalResults");
+                string pages = json.Substring(index, 20);
+                string s = "";
+                foreach (char c in pages.ToArray<char>())
+                {
+                    if (Char.IsDigit(c))
+                        s += c.ToString();
+                }
+                decimal d= decimal.Parse(s) / 10m;
+                _PageTotal =(int)Math.Ceiling(d);
                 jsonist = "[" + jsonist.Split(']')[0] + "]";
 
                 var result = JsonConvert.DeserializeObject<List<OmdbSearch>>(jsonist);
                 return result;
             }
         }
-        public static List<OmdbSearch> Search(string title, string year)
+        public static List<OmdbSearch> Search(string title, int page)
         {
             using (WebClient wc = new WebClient())
             {
+
                 //string url = "http://www.omdbapi.com/?s=" + itemTitle.Trim();
-                var json = wc.DownloadString((searchURL + title + "&Page=1").Trim());
-                var jsonist = json.Split('[')[1];
-                // _PageTotal = GetTotalPageNumber(json.Split(']')[1]);
-                jsonist = "[" + json.Split(']')[0] + "]";
-
-                var result = JsonConvert.DeserializeObject<List<OmdbSearch>>(jsonist);
-                return result;
-            }
-        }
-        private static int GetTotalPageNumber(string endOfQuery)
-        {
-
-
-            string temp = endOfQuery.Split(':')[1].ToString();
-            string final = temp;
-            int i = 0;
-            foreach (char c in temp)
-            {
-                if (Char.IsDigit(c))
+                var json = wc.DownloadString((searchURL + title + "&Page=" + page.ToString()).Trim());
+                if (json != null)
                 {
-                    final = temp.Remove(i + 1);
+                    var jsonist = json.Split('[')[1];
+                    // _PageTotal = GetTotalPageNumber(json.Split(']')[1]);
+                    jsonist = "[" + jsonist.Split(']')[0] + "]";
 
+                    var result = JsonConvert.DeserializeObject<List<OmdbSearch>>(jsonist);
+                    return result;
                 }
-                i++;
             }
-            int _Page = Convert.ToInt32(final.Substring(1));
-            return _Page;
+
+            return null;
         }
+       
 
         public static OmdbTvShow GetTvShowItemInformation(string id)
         {

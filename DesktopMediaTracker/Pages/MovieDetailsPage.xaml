@@ -19,6 +19,12 @@
         <TextBox x:Name="uxPlotBlock" HorizontalAlignment="Left" Margin="65,84,0,0" 
                    TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="445"
                    IsReadOnly="True" />
+        <Label x:Name="uxActorsLabel" Content="Actors" HorizontalAlignment="Left" Margin="125,165,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="uxGenreLabel" Content="Label" HorizontalAlignment="Left" Margin="325,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.474,1.692"/>
+        <ListBox x:Name="ActorListBox" HorizontalAlignment="Left" Height="70" Margin="195,165,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="GenrelistBox" HorizontalAlignment="Left" Height="70" Margin="395,165,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="uxDirectorLabel" Content="Director" HorizontalAlignment="Left" Margin="15,170,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="uxDirectorText" Content="Label" HorizontalAlignment="Left" Margin="20,201,0,0" VerticalAlignment="Top"/>
 
 
 

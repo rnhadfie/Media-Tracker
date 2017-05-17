@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopMediaTracker", "DesktopMediaTracker\DesktopMediaTracker.csproj", "{A31BBA1D-D0AC-4EA9-9AC0-0377B48477E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaObjectsInterface", "MediaObjectsInterface\MediaObjectsInterface.csproj", "{7E0FFC9E-1120-4499-BC37-03EF3E74CB60}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaObjectLibrary", "MediaObjectLibrary\MediaObjectLibrary.csproj", "{8A63FB53-9343-4ADC-BC2D-094E27C47D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserMediaDataLibrary", "UserMediaDataLibrary\UserMediaDataLibrary.csproj", "{AB44AD19-FB70-49B8-9F51-44B97190B340}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{A31BBA1D-D0AC-4EA9-9AC0-0377B48477E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A31BBA1D-D0AC-4EA9-9AC0-0377B48477E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A31BBA1D-D0AC-4EA9-9AC0-0377B48477E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E0FFC9E-1120-4499-BC37-03EF3E74CB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E0FFC9E-1120-4499-BC37-03EF3E74CB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E0FFC9E-1120-4499-BC37-03EF3E74CB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E0FFC9E-1120-4499-BC37-03EF3E74CB60}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A63FB53-9343-4ADC-BC2D-094E27C47D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8A63FB53-9343-4ADC-BC2D-094E27C47D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A63FB53-9343-4ADC-BC2D-094E27C47D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A63FB53-9343-4ADC-BC2D-094E27C47D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB44AD19-FB70-49B8-9F51-44B97190B340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB44AD19-FB70-49B8-9F51-44B97190B340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB44AD19-FB70-49B8-9F51-44B97190B340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB44AD19-FB70-49B8-9F51-44B97190B340}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

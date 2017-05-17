@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UserMedia>
+<Genre>
+  <GenreCode>0</GenreCode>
+  <Genre>NA</Genre>
+</Genre>
+<Genre>
+  <GenreCode>1</GenreCode>
+  <Genre>Action</Genre>
+</Genre>
+
+<Genre>
+  <GenreCode>2</GenreCode>
+  <Genre>Adventure</Genre>
+</Genre>
+  
+  <Genre>
+    <GenreCode>3</GenreCode>
+    <Genre>Animation</Genre>
+  </Genre>
+
+  <Genre>
+  <GenreCode>4</GenreCode>
+  <Genre>Biography</Genre>
+</Genre>
+
+<Genre>
+  <GenreCode>5</GenreCode>
+  <Genre>Comedy</Genre>
+</Genre>
+
+<Genre>
+  <GenreCode>6</GenreCode>
+  <Genre>Crime</Genre>
+</Genre>
+
+<Genre>
+  <GenreCode>7</GenreCode>
+  <Genre>Documentary</Genre>
+</Genre>
+
+<Genre>
+  <GenreCode>8</GenreCode>
+  <Genre>Drama</Genre>
+</Genre>
+
+  <Genre>
+    <GenreCode>9</GenreCode>
+    <Genre>History</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>10</GenreCode>
+    <Genre>Family</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>11</GenreCode>
+    <Genre>Fantasy</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>12</GenreCode>
+    <Genre>Film Noir</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>13</GenreCode>
+    <Genre>Family</Genre>
+  </Genre>
+  <Genre>
+    <GenreCode>14</GenreCode>
+    <Genre>Horror</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>15</GenreCode>
+    <Genre>Music</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>16</GenreCode>
+    <Genre>Musical</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>17</GenreCode>
+    <Genre>Mystery</Genre>
+  </Genre>
+  <Genre>
+    <GenreCode>18</GenreCode>
+    <Genre>Romance</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>19</GenreCode>
+    <Genre>Sci Fi</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>20</GenreCode>
+    <Genre>Sport</Genre>
+  </Genre>
+  
+  <Genre>
+    <GenreCode>21</GenreCode>
+    <Genre>Thriller</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>22</GenreCode>
+    <Genre>War</Genre>
+  </Genre>
+
+  <Genre>
+    <GenreCode>23</GenreCode>
+    <Genre>Other</Genre>
+  </Genre>
+</UserMedia>

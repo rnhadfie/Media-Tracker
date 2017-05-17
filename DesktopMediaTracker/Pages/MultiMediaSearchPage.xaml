@@ -9,12 +9,9 @@
       Title="MultiMediaSearchPage" Width="515" >
 
     <Canvas>
-        <Rectangle Fill="Azure"  HorizontalAlignment="Left" Height="80" Stroke="Black" VerticalAlignment="Top" Width="520"/>
+        <Rectangle Fill="Azure"  HorizontalAlignment="Left" Height="80" Stroke="Black" VerticalAlignment="Top" Width="515"/>
         <TextBox x:Name="uxSearchText" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="500"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="403,49,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="97">
-                <Hyperlink NavigateUri="AdvancedSearchPage.xaml?Message=Hello">Advanced Search</Hyperlink>
-        </TextBlock>
-        <ScrollViewer HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="510" Canvas.Top="85">
+        <ScrollViewer HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="515" Canvas.Top="85">
             <Grid Name="uxDisplayGrid" Height="320" Width="504" ShowGridLines="True">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="75*"/>
@@ -31,12 +28,8 @@
             </Grid>
 
         </ScrollViewer>
-        <Label x:Name="uxFirst" Content="1, " HorizontalAlignment="Left" Margin="196,280,0,-29" VerticalAlignment="Top" Height="29" Width="24" TextBlock.Foreground="Blue" TextBlock.TextAlignment="Right" RenderTransformOrigin="0.417,-2.241"/>
-        <Label x:Name="uxNext" Content="2,  " HorizontalAlignment="Left" Margin="220,280,0,-29" VerticalAlignment="Top" Height="29" Width="22" TextBlock.Foreground="Blue"/>
-        <Label x:Name="uxNextTwo" Content="3,  " HorizontalAlignment="Left" Margin="242,280,0,-29" VerticalAlignment="Top" Height="29" Width="22" TextBlock.Foreground="Blue"/>
-        <Label x:Name="uxLast" Content="Last" HorizontalAlignment="Left" Margin="269,280,0,-29" VerticalAlignment="Top" Height="29" Width="37" TextBlock.Foreground="Blue" RenderTransformOrigin="0.73,0.345"/>
 
-        <ComboBox x:Name="uxItemTypeComboBox" Canvas.Left="10" Canvas.Top="45" Width="195" >
+        <ComboBox x:Name="uxItemTypeComboBox" Canvas.Left="10" Canvas.Top="45" Width="235" >
             <ComboBoxItem Content="All Media" HorizontalAlignment="Left" Width="178"/>
             <ComboBoxItem Content="Tv Show" HorizontalAlignment="Left" Width="178"/>
             <ComboBoxItem Content="Movie" HorizontalAlignment="Left" Width="178"/>
@@ -44,9 +37,19 @@
             <ComboBoxItem Content="Comic/Manga/Graphic Novel" HorizontalAlignment="Left" Width="178"/>
             <ComboBoxItem Content="Album" HorizontalAlignment="Left" Width="193"/>
         </ComboBox>
-        <Button x:Name="uxSearchButton" Content="Search" HorizontalAlignment="Left" Margin="255,45,0,0" 
-                VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.84,0.3" Click="uxSearchButton_Click"
+        <Button x:Name="uxSearchButton" Content="Search" HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.84,0.3" Click="uxSearchButton_Click" Canvas.Left="285" Canvas.Top="47"
                 />
+        <StackPanel x:Name="uxPageStackPanel" Height="24" Canvas.Left="185" Canvas.Top="280" Width="135" Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+            <Label x:Name="uxFirst" Content="1, " MouseDoubleClick="uxFirst_MouseDoubleClick" RenderTransformOrigin="-0.909,0.625"/>
+            <Label x:Name="uxNext" Content="2, " MouseDoubleClick="uxNext_MouseDoubleClick"/>
+            <Label x:Name="uxNext2" Content="3, " MouseDoubleClick="uxNext2_MouseDoubleClick"/>
+            <Label x:Name="uxNext3" Content="4, " MouseDoubleClick="uxNext3_MouseDoubleClick"/>
+            <Label x:Name="uxLast" Content="Last" MouseDown="uxLast_MouseDown"/>
+        </StackPanel>
+
+
+
 
 
     </Canvas>

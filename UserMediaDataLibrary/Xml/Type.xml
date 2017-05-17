@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<userMedia>
+  <Type>
+    <Id>0</Id>
+    <Type>Movie</Type>
+  </Type>
+
+  <Type>
+    <Id>1</Id>
+    <Type>Tv Show</Type>
+  </Type>
+</userMedia>

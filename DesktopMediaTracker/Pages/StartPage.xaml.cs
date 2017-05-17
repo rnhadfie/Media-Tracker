@@ -65,7 +65,10 @@ namespace DesktopMediaTracker.Pages
 
         private void uxSearchButton_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new MultiMediaSearchPage());
+            if(uxSearchBox.Text.Length<=0)
+                this.NavigationService.Navigate(new MultiMediaSearchPage());
+            else
+                this.NavigationService.Navigate(new MultiMediaSearchPage(uxSearchBox.Text));
 
         }
     }

@@ -33,9 +33,20 @@ namespace DesktopMediaTracker
             OmdbMovie data = MediaObjectFactory.GetMovieItemInformation(id);
             uxTitle.Content = data.Title;
             uxPlotBlock.Text = data.Plot;
-            uxActors.Text = data.Actors;
+            foreach (string s in data.Actors.Split(','))
+            {
+                uxActorListBox.Items.Add(s);
+            }
+
+            foreach (string s in data.Genre.Split(','))
+            {
+                uxGenreListBox.Items.Add(s);
+            }
+            uxDirectorLabel.Content += data.Director;
             uxYear.Content += data.Released;
             uxRating.Content += data.Rated;
+            uxLangaugeLabel.Content += data.Language;
+            uxRuntimeLabel.Content += data.Runtime;
 
         }
     }

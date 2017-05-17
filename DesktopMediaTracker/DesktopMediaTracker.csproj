@@ -196,6 +196,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="MediaTrackerDiagram.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -225,10 +226,6 @@
     <ProjectReference Include="..\MediaObjectLibrary\MediaObjectLibrary.csproj">
       <Project>{8a63fb53-9343-4adc-bc2d-094e27c47d8d}</Project>
       <Name>MediaObjectLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MediaObjectsInterface\MediaObjectsInterface.csproj">
-      <Project>{7E0FFC9E-1120-4499-BC37-03EF3E74CB60}</Project>
-      <Name>MediaObjectsInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
