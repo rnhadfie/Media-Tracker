@@ -9,21 +9,17 @@ namespace UserMediaDataLibrary.Init
 {
     class FillGenre
     {
-        DataSet userMedia = new DataSet();
+        public DataSet userMedia = new DataSet();
         private void LoadDataSet()
         {
             userMedia.ReadXmlSchema("UserMediaSchema.xsd");
             userMedia.ReadXml("Type.xml");
-            userMedia.WriteXmlSchema("UserMediaSchema.xsd");
+            if(userMedia.Tables["Genre"].Rows.Count>0)
+                userMedia.WriteXmlSchema("UserMediaSchema.xsd");
         }
         public FillGenre()
-        {
-            LoadDataSet();
-            int i=userMedia.Tables.IndexOf("Genre");
-            DataTable genres = userMedia.Tables[i];
-
-            DataRow row= genres.NewRow();
-            row["GenreCode"].
+        {    
+            LoadDataSet();     
         }   
     }
 }

@@ -33,9 +33,8 @@
             <ComboBoxItem Content="All Media" HorizontalAlignment="Left" Width="178"/>
             <ComboBoxItem Content="Tv Show" HorizontalAlignment="Left" Width="178"/>
             <ComboBoxItem Content="Movie" HorizontalAlignment="Left" Width="178"/>
-            <ComboBoxItem Content="Novel" HorizontalAlignment="Left" Width="178"/>
-            <ComboBoxItem Content="Comic/Manga/Graphic Novel" HorizontalAlignment="Left" Width="178"/>
-            <ComboBoxItem Content="Album" HorizontalAlignment="Left" Width="193"/>
+           
+            
         </ComboBox>
         <Button x:Name="uxSearchButton" Content="Search" HorizontalAlignment="Left" 
                 VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.84,0.3" Click="uxSearchButton_Click" Canvas.Left="285" Canvas.Top="47"
@@ -45,12 +44,8 @@
             <Label x:Name="uxNext" Content="2, " MouseDoubleClick="uxNext_MouseDoubleClick"/>
             <Label x:Name="uxNext2" Content="3, " MouseDoubleClick="uxNext2_MouseDoubleClick"/>
             <Label x:Name="uxNext3" Content="4, " MouseDoubleClick="uxNext3_MouseDoubleClick"/>
-            <Label x:Name="uxLast" Content="Last" MouseDown="uxLast_MouseDown"/>
+            <Label x:Name="uxLast" Content="5" MouseDown="uxLast_MouseDown"/>
         </StackPanel>
-
-
-
-
 
     </Canvas>
 </Page>

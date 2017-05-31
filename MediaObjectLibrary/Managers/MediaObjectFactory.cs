@@ -11,8 +11,8 @@ namespace MediaObjectLibrary.Managers
 {
    public class MediaObjectFactory
     {
-        private List<OmdbTvShow> _ListOfSeries;
-        private List<OmdbMovie> _ListOfMovies;
+        private static List<OmdbSearch> _ListOfSeries;
+        private static List<OmdbSearch> _ListOfMovies;
 
         private static string searchURL = "http://www.omdbapi.com/?s=";
         private static string FindTitleURL = "http://www.omdbapi.com/?t=";
@@ -20,31 +20,37 @@ namespace MediaObjectLibrary.Managers
         private static int _PageTotal;
         public MediaObjectFactory()
         {
-            _ListOfSeries = new List<OmdbTvShow>();
-            _ListOfMovies = new List<OmdbMovie>();
+            _ListOfSeries = new List<OmdbSearch>();
+            _ListOfMovies = new List<OmdbSearch>();
         }
-        public void OrganizeMedia(List<OmdbSearch> items)
+        public static List<OmdbSearch> OrganizeMedia(List<OmdbSearch> items, string type)
         {
             foreach (OmdbSearch item in items)
             {
                 if (item.Type.Equals("Series"))
                 {
-                   OmdbTvShow temp = GetTvShowItemInformation(item.imdbID);
-                    //OmdbTvShow tvs = new OmdbTvShow();
-                    _ListOfSeries.Add(temp);
+                   
+                    _ListOfSeries.Add(item);
                 }
                 else if (item.Type.Equals("Movie"))
                 {
-                    OmdbMovie temp = GetMovieItemInformation(item.imdbID);
+                   // OmdbMovie temp = GetMovieItemInformation(item.imdbID);
                    
-                    _ListOfMovies.Add(temp);
+                    _ListOfMovies.Add(item);
                 }
             }
-        }
+            if (type.Equals("Series"))
+            {
+                return _ListOfSeries;
+            }
+            else {
+                return _ListOfMovies;
+                }
+            }
 
         public static int PageTotal { get { return _PageTotal; } }
-        public List<OmdbTvShow> ListOfSeries { get { return _ListOfSeries; } }
-        public List<OmdbMovie> ListOfMovies { get { return _ListOfMovies; } }
+        public List<OmdbSearch> ListOfSeries { get { return _ListOfSeries; } }
+        public List<OmdbSearch> ListOfMovies { get { return _ListOfMovies; } }
 
 
 
@@ -54,6 +60,7 @@ namespace MediaObjectLibrary.Managers
             {
                 //string url = "http://www.omdbapi.com/?s=" + itemTitle.Trim();
                 var json = wc.DownloadString((searchURL + title + "&Page=1").Trim());
+                if (!json.Contains("No API key provided")) { 
                 var jsonist = json.Split('[')[1];
                 int index = json.IndexOf("totalResults");
                 string pages = json.Substring(index, 20);
@@ -63,13 +70,16 @@ namespace MediaObjectLibrary.Managers
                     if (Char.IsDigit(c))
                         s += c.ToString();
                 }
-                decimal d= decimal.Parse(s) / 10m;
-                _PageTotal =(int)Math.Ceiling(d);
+                decimal d = decimal.Parse(s) / 10m;
+                _PageTotal = (int)Math.Ceiling(d);
                 jsonist = "[" + jsonist.Split(']')[0] + "]";
 
                 var result = JsonConvert.DeserializeObject<List<OmdbSearch>>(jsonist);
+                
                 return result;
             }
+            return null;
+        }
         }
         public static List<OmdbSearch> Search(string title, int page)
         {

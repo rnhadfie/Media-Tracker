@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataManipulation\UpdateUserMedia.cs" />
     <Compile Include="Init\FillGenre.cs" />
     <Compile Include="Init\FillStatus.cs" />
     <Compile Include="Init\FillType.cs" />
@@ -57,9 +58,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataManipulation\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Xml\Genre.xml">
       <SubType>Designer</SubType>

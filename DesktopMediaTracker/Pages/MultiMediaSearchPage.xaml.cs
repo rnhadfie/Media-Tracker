@@ -104,28 +104,20 @@ namespace DesktopMediaTracker.Pages
         private void NumberReset(string labelText)
         {
            
-            if (labelText.Equals("First"))
-            {
-                uxFirst.Content = "1, ";
-                uxNext.Content = "2, ";
-                uxNext2.Content = "3, ";
-                uxNext3.Content = "4, ";
-            }
-            else if (labelText.Equals("Last"))
-            {
+            
                 if (TotalNumberOfPages > 4)
                 {
                     uxNext3.Content = (TotalNumberOfPages - 1).ToString() + ", ";
                     uxNext2.Content = (TotalNumberOfPages - 2).ToString() + ", ";
                     uxNext.Content = (TotalNumberOfPages - 3).ToString() + ", ";
-                    uxFirst.Content = "First";
+                    uxFirst.Content = (TotalNumberOfPages - 4).ToString();
                 }
-            }
+            
             else
             {
-                if((TotalNumberOfPages-2)> int.Parse(labelText[0].ToString()))
-                uxFirst.Content = "First";
-                uxNext.Content = labelText;
+                if((TotalNumberOfPages-1)> int.Parse(labelText[0].ToString()))
+                uxFirst.Content = labelText;
+                uxNext.Content = (int.Parse(labelText[0].ToString()) + 1).ToString() + ", ";
                 uxNext.Content = (int.Parse(labelText[0].ToString()) + 2).ToString() + ", ";
                 uxNext2.Content = (int.Parse(labelText[0].ToString()) + 3).ToString() + ", ";
                 
