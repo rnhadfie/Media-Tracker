@@ -1,0 +1,31 @@
+﻿<Page x:Class="DesktopMediaTracker.BookDetailedPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DesktopMediaTracker"
+      mc:Ignorable="d" 
+     d:DesignHeight="304" d:DesignWidth="520"
+      Title="BookDetailedPage">
+
+    <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="520"/>
+        <Image x:Name="uxCoverImage" HorizontalAlignment="Left" Height="180" Margin="10,58,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="uxAuthor" Content="Label" HorizontalAlignment="Left" Margin="145,45,0,0" VerticalAlignment="Top" Width="215"/>
+        <TextBlock x:Name="uxDescriptionBlock" HorizontalAlignment="Left" Margin="145,109,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="129" Width="355"/>
+        <Label x:Name="uxLanguage" Content="Langague: " HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="uxStatusCombobox" HorizontalAlignment="Left" Margin="365,45,0,0" VerticalAlignment="Top" Width="135">
+            <ComboBoxItem Tag="NotReading" IsSelected="True">Not Reading</ComboBoxItem>
+            <ComboBoxItem Tag="Planning">Planning to Reading</ComboBoxItem>
+            <ComboBoxItem Tag="Reading">Reading</ComboBoxItem>
+            <ComboBoxItem Tag="Finished">Finished Reading</ComboBoxItem>
+            <ComboBoxItem Tag="Dropped">Dropped</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="uxPublisher" Content="Label" HorizontalAlignment="Left" Margin="145,76,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label x:Name="uxPublishDate" Content="Label" HorizontalAlignment="Left" Margin="365,76,0,0" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="uxCategory" Content="Genre: " HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="uxMaturity" Content="Maturity: " HorizontalAlignment="Left" Margin="402,247,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label x:Name="uxTitle" Content="Label" HorizontalAlignment="Center"  Margin="20,1,10,0" VerticalAlignment="Top" Width="490" FontWeight="Bold" FontSize="22"/>
+
+    </Grid>
+</Page>

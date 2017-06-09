@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<BookData xmlns="http://tempuri.org/BookData.xsd">
+  <Books>
+    <ISBN>0-385-72040-8</ISBN>
+    <Title>Ali and Nino</Title>
+    <Author>Kurban Said</Author>
+    <ReadingStatus>Planning</ReadingStatus>
+  </Books>
+  <Status>
+    <Status>NotReading</Status>
+  </Status>
+  <Status>
+    <Status>Planning</Status>
+  </Status>
+  <Status>
+    <Status>Reading</Status>
+  </Status>
+  <Status>
+    <Status>Finished</Status>
+  </Status>
+  <Status>
+    <Status>Dropped</Status>
+  </Status>
+  <Genre>
+    <Genre>Fiction</Genre>
+  </Genre>
+  <Book_Genres>
+    <BookISBN>0-385-72040-8</BookISBN>
+    <Genre>Fiction</Genre>
+  </Book_Genres>
+</BookData>

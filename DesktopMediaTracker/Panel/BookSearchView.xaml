@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="DesktopMediaTracker.Panel.BookView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesktopMediaTracker.Panel"
+             mc:Ignorable="d" Height="150" Width="495">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image x:Name="uxCover" HorizontalAlignment="Left" Height="109" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="uxTitle" Content="NA" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" BorderThickness="3,3,3,1" FontWeight="Bold" FontSize="18" Width="365" Height="38"/>
+        <Label x:Name="uxAuthor" Content="NA" HorizontalAlignment="Left" Margin="105,41,0,0" VerticalAlignment="Top" BorderThickness="2,0" Height="26" Width="195"/>
+        <TextBlock x:Name="uxDiscription" HorizontalAlignment="Left" Margin="110,67,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="52" Width="360"/>
+        <Label x:Name="uxGenre" Content="Genre: " HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="180"/>
+        <Label x:Name="uxPageNumber" Content="Pages: " HorizontalAlignment="Left" Margin="405,119,0,0" VerticalAlignment="Top" Width="90" Grid.RowSpan="2"/>
+        <Button x:Name="uxViewButton" Content="View" HorizontalAlignment="Left" Margin="215,2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="uxViewButton_Click"/>
+
+    </Grid>
+</UserControl>

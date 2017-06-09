@@ -27,7 +27,7 @@
         <Button x:Name="uxViewYourMedia" Content="View Media List" Margin="260,84,20,0" Height="20" VerticalAlignment="Top" Grid.Row="1" Click="uxViewYourMedia_Click"/>
         <Button x:Name="uxMediaMovies" Content="View Movies" Margin="260,125,20,0" VerticalAlignment="Top" Height="20" Click="uxMediaMovies_Click"/>
         <Button x:Name="uxMediaTvShows" Content="View Tv Shows" Margin="260,235,20,0" VerticalAlignment="Top" Height="20" Click="uxMediaTvShows_Click"/>
-        <Button x:Name="uxMediaNovels" Content="View Novels" Margin="260,195,20,0" VerticalAlignment="Top" Height="20" Click="uxMediaNovels_Click" Visibility="Hidden"/>
+        <Button x:Name="uxMediaNovels" Content="View Novels" Margin="260,195,20,0" VerticalAlignment="Top" Height="20" Click="uxMediaNovels_Click" Visibility="Visible"/>
         <Button x:Name="uxMediaGraphicNovel" Content="View Comics, Manga, and Graphic Novels" Margin="260,160,20,0" VerticalAlignment="Top" Height="20" Click="uxMediaGraphicNovel_Click" Visibility="Hidden"/>
         <Button x:Name="uxMediaMusic" Content="BView Albums" Margin="260,274,20,0" VerticalAlignment="Top" Height="20" Click="uxMediaMusic_Click" Visibility="Hidden"/>
     </Grid>

@@ -62,7 +62,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Books\BookSearch.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Managers\BookManager.cs" />
+    <Compile Include="Managers\DataManager.cs" />
     <Compile Include="Managers\MediaObjectFactory.cs" />
     <Compile Include="MediaStatus.cs" />
     <Compile Include="OMDB\OmdbEpisode.cs" />
@@ -76,7 +79,12 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\UserMediaDataLibrary\UserMediaDataLibrary.csproj">
+      <Project>{ab44ad19-fb70-49b8-9f51-44b97190b340}</Project>
+      <Name>UserMediaDataLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

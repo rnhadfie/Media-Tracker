@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BookData" targetNamespace="http://tempuri.org/BookData.xsd" xmlns:mstns="http://tempuri.org/BookData.xsd" xmlns="http://tempuri.org/BookData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BookData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BookData" msprop:Generator_UserDSName="BookData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Books" msprop:Generator_TableClassName="BooksDataTable" msprop:Generator_TableVarName="tableBooks" msprop:Generator_RowChangedName="BooksRowChanged" msprop:Generator_TablePropName="Books" msprop:Generator_RowDeletingName="BooksRowDeleting" msprop:Generator_RowChangingName="BooksRowChanging" msprop:Generator_RowEvHandlerName="BooksRowChangeEventHandler" msprop:Generator_RowDeletedName="BooksRowDeleted" msprop:Generator_RowClassName="BooksRow" msprop:Generator_UserTableName="Books" msprop:Generator_RowEvArgName="BooksRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ISBN" msprop:Generator_ColumnVarNameInTable="columnISBN" msprop:Generator_ColumnPropNameInRow="ISBN" msprop:Generator_ColumnPropNameInTable="ISBNColumn" msprop:Generator_UserColumnName="ISBN" type="xs:string" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="Author" msprop:Generator_ColumnVarNameInTable="columnAuthor" msprop:Generator_ColumnPropNameInRow="Author" msprop:Generator_ColumnPropNameInTable="AuthorColumn" msprop:Generator_UserColumnName="Author" type="xs:string" minOccurs="0" />
+              <xs:element name="ReadingStatus" msprop:Generator_ColumnVarNameInTable="columnReadingStatus" msprop:Generator_ColumnPropNameInRow="ReadingStatus" msprop:Generator_ColumnPropNameInTable="ReadingStatusColumn" msprop:Generator_UserColumnName="ReadingStatus" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Status" msprop:Generator_TableClassName="StatusDataTable" msprop:Generator_TableVarName="tableStatus" msprop:Generator_RowChangedName="StatusRowChanged" msprop:Generator_TablePropName="Status" msprop:Generator_RowDeletingName="StatusRowDeleting" msprop:Generator_RowChangingName="StatusRowChanging" msprop:Generator_RowEvHandlerName="StatusRowChangeEventHandler" msprop:Generator_RowDeletedName="StatusRowDeleted" msprop:Generator_RowClassName="StatusRow" msprop:Generator_UserTableName="Status" msprop:Generator_RowEvArgName="StatusRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Genre" msprop:Generator_TableClassName="GenreDataTable" msprop:Generator_TableVarName="tableGenre" msprop:Generator_RowChangedName="GenreRowChanged" msprop:Generator_TablePropName="Genre" msprop:Generator_RowDeletingName="GenreRowDeleting" msprop:Generator_RowChangingName="GenreRowChanging" msprop:Generator_RowEvHandlerName="GenreRowChangeEventHandler" msprop:Generator_RowDeletedName="GenreRowDeleted" msprop:Generator_RowClassName="GenreRow" msprop:Generator_UserTableName="Genre" msprop:Generator_RowEvArgName="GenreRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Book_Genres" msprop:Generator_TableClassName="Book_GenresDataTable" msprop:Generator_TableVarName="tableBook_Genres" msprop:Generator_RowChangedName="Book_GenresRowChanged" msprop:Generator_TablePropName="Book_Genres" msprop:Generator_RowDeletingName="Book_GenresRowDeleting" msprop:Generator_RowChangingName="Book_GenresRowChanging" msprop:Generator_RowEvHandlerName="Book_GenresRowChangeEventHandler" msprop:Generator_RowDeletedName="Book_GenresRowDeleted" msprop:Generator_RowClassName="Book_GenresRow" msprop:Generator_UserTableName="Book_Genres" msprop:Generator_RowEvArgName="Book_GenresRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookISBN" msprop:Generator_ColumnVarNameInTable="columnBookISBN" msprop:Generator_ColumnPropNameInRow="BookISBN" msprop:Generator_ColumnPropNameInTable="BookISBNColumn" msprop:Generator_UserColumnName="BookISBN" type="xs:string" />
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Books" />
+      <xs:field xpath="mstns:ISBN" />
+    </xs:unique>
+    <xs:unique name="StatusKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Status" />
+      <xs:field xpath="mstns:Status" />
+    </xs:unique>
+    <xs:unique name="GenreKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Genre" />
+      <xs:field xpath="mstns:Genre" />
+    </xs:unique>
+    <xs:unique name="Book_Genres_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Book_Genres" />
+      <xs:field xpath="mstns:BookISBN" />
+      <xs:field xpath="mstns:Genre" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Books_Book_Genres" msdata:parent="Books" msdata:child="Book_Genres" msdata:parentkey="ISBN" msdata:childkey="BookISBN" msprop:Generator_UserChildTable="Book_Genres" msprop:Generator_ChildPropName="GetBook_GenresRows" msprop:Generator_UserRelationName="Books_Book_Genres" msprop:Generator_RelationVarName="relationBooks_Book_Genres" msprop:Generator_UserParentTable="Books" msprop:Generator_ParentPropName="BooksRow" />
+      <msdata:Relationship name="Book_Genres_Genre" msdata:parent="Book_Genres" msdata:child="Genre" msdata:parentkey="Genre" msdata:childkey="Genre" msprop:Generator_UserChildTable="Genre" msprop:Generator_ChildPropName="GetGenreRows" msprop:Generator_UserRelationName="Book_Genres_Genre" msprop:Generator_ParentPropName="Book_GenresRow" msprop:Generator_RelationVarName="relationBook_Genres_Genre" msprop:Generator_UserParentTable="Book_Genres" />
+      <msdata:Relationship name="Books_Status" msdata:parent="Books" msdata:child="Status" msdata:parentkey="ReadingStatus" msdata:childkey="Status" msprop:Generator_UserChildTable="Status" msprop:Generator_ChildPropName="GetStatusRows" msprop:Generator_UserRelationName="Books_Status" msprop:Generator_RelationVarName="relationBooks_Status" msprop:Generator_UserParentTable="Books" msprop:Generator_ParentPropName="BooksRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

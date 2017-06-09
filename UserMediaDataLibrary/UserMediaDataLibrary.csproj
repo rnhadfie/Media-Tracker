@@ -40,13 +40,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookData.cs">
+      <DependentUpon>BookData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataManipulation\UpdateDataTable.cs" />
     <Compile Include="DataManipulation\UpdateUserMedia.cs" />
     <Compile Include="Init\FillGenre.cs" />
     <Compile Include="Init\FillStatus.cs" />
     <Compile Include="Init\FillType.cs" />
+    <Compile Include="Init\Init.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="BookData.xsc">
+      <DependentUpon>BookData.xsd</DependentUpon>
+    </None>
+    <None Include="BookData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BookData.xss">
+      <DependentUpon>BookData.xsd</DependentUpon>
+    </None>
     <None Include="UserMediaSchema.xsc">
       <DependentUpon>UserMediaSchema.xsd</DependentUpon>
     </None>
@@ -60,10 +81,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Xml\BookData.xml" />
+    <Content Include="Xml\BookStaus.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Xml\Genre.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Xml\Status.xml" />
+    <Content Include="Xml\Status.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Xml\Type.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

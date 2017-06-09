@@ -40,7 +40,7 @@ namespace DesktopMediaTracker.Pages
 
         private void uxMediaMovies_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new SingleMediaSearchPage("Movie"));
+           // this.NavigationService.Navigate(new SingleMediaSearchPage("Movie"));
         }
 
         private void uxMediaGraphicNovel_Click(object sender, RoutedEventArgs e)
@@ -51,11 +51,12 @@ namespace DesktopMediaTracker.Pages
         private void uxMediaNovels_Click(object sender, RoutedEventArgs e)
         {
             //this.NavigationService.Navigate(new SingleMediaSearchPage("Novel"));
+            //MediaObjectLibrary.Managers.BookManager.LoadBookItem();
         }
 
         private void uxMediaTvShows_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new SingleMediaSearchPage("Tv Show"));
+           // this.NavigationService.Navigate(new SingleMediaSearchPage("Tv Show"));
         }
 
         private void uxMediaMusic_Click(object sender, RoutedEventArgs e)

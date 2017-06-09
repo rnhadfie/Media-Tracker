@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 
+
 namespace DesktopMediaTracker
 {
     /// <summary>
@@ -26,6 +27,7 @@ namespace DesktopMediaTracker
         {
             InitializeComponent();
             InitializeData(id);
+
         }
 
         private void InitializeData(string id)

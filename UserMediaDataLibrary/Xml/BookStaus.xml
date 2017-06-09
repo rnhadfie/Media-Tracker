@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BookData>
+  <Status>
+    <Status>NotReading</Status>
+  </Status>
+
+  <Status>
+    <Status>Planning</Status>
+  </Status>
+
+  <Status>
+    <Status>Reading</Status>
+  </Status>
+
+  <Status>
+    <Status>Finished</Status>
+  </Status>
+
+  <Status>
+    <Status>Dropped</Status>
+  </Status>
+</BookData>
